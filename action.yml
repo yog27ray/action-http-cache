@@ -49,7 +49,7 @@ inputs:
 
 runs:
   using: 'docker'
-  main: 'yog27ray/action-cache-http-image'
+  image: 'yog27ray/action-cache-http-image'
 
 branding:
   icon: 'check-square'
