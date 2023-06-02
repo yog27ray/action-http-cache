@@ -1,0 +1,56 @@
+name: action-cache-http
+description: Cache dependencies over http
+
+inputs:
+  version:
+    description: What version of nodejs or main language you are using
+    default: latest
+    required: true
+
+  lock_file:
+    description: Provide the lock file path e.g yarn.lock, composer.lock
+    required: true
+
+  ignore_fields:
+    description: Provide the fields to ignore from lock_file e.g version
+    required: false
+
+  install_command:
+    description: What is the full install command
+    required: true
+
+  operating_dir:
+    description: Which dir to operate into (default root dir of repo)
+    required: false
+
+  disable_compression:
+    description: Set to `true` to disable compression to improve performance. Uses more storage.
+    required: false
+
+  destination_folder:
+    description: destination_folder e.g. node_modules, vendor
+    required: true
+
+  cache_http_api:
+    description: Where is your cache service installed https://github.com/kevincobain2000/cache-http
+    required: true
+
+  http_proxy:
+    description: Pass proxy if any
+    required: false
+
+  basic_auth_username:
+    description: Basic auth username if any
+    required: false
+
+  basic_auth_password:
+    description: Basic auth password if any
+    required: false
+
+runs:
+  using: 'docker'
+  main: 'yog27ray/action-cache-http-image'
+
+branding:
+  icon: 'check-square'
+  color: 'purple'
