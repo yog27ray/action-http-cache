@@ -1,4 +1,4 @@
-name: action-cache-http
+name: action-http-cache
 description: Cache dependencies over http
 
 inputs:
