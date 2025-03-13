@@ -47,6 +47,10 @@ inputs:
     description: Basic auth password if any
     required: false
 
+  user:
+    description: Change foler owenership to user
+    required: false
+
 runs:
   using: 'docker'
   image: 'docker://yog27ray/action-cache-http-image'
