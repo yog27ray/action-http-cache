@@ -47,7 +47,7 @@ inputs:
     description: Basic auth password if any
     required: false
 
-  user:
+  ownership_user_uid:
     description: Change foler owenership to user
     required: false
 
